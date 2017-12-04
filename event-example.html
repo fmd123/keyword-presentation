@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 id = 'myId'>CLICK THIS</h1>
+
+    <script type="text/javascript">
+
+// invoking a function
+    function a() {
+console.log("basic invocation ", this); //global object
+};
+a()
+// ::::::::::::::::::::::::::::::::::::::
+// Invoking a function as a method on object
+myObj = {
+    firstName: 'Francesca',
+    lastName: 'Davis',
+  sayHello:function() {
+    console.log("Hello " + this.firstName + "!")
+    console.log("method on an object",this); //points to myObj object
+    }
+
+};
+
+myObj.sayHello()
+
+
+
+var link = document.getElementById("myId");
+link.addEventListener("click", function() {
+console.log(this); //points to link
+}, false);
+    </script>
+
+  </body>
+</html>
