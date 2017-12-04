@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>arrow function example</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+console.log("global ", this)
+
+var x =x(() =>{
+
+console.log('this inside fn x', this);
+var y=y()=> {
+  console.log('this inside fn y', this);
+
+   var z =z() =>{
+    console.log('this inside fn z', this);
+
+  })
+
+  z();
+})
+y();
+})
+
+
+x();
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
