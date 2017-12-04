@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>call and apply</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+
+
+    var palestrina = {
+      work: "Missa Papae Marcelli",
+      describe: function() {
+        console.log(this.work);
+      }
+    };
+
+    var erasmus = {
+    work: "Freedom of the Will"
+};
+palestrina.describe();
+//outputs Missa Papae Marcelli
+
+palestrina.describe.call(erasmus);
+// Outputs: "Freedom of the Will"
+
+
+var person1 = {name: 'Emma', age: 101, size: '2xM'};
+var person2 = {name: 'Lucy', age: 6, size: '1xS'};
+
+var sayHello = function(){
+    console.log('Hello, ' + this.name);
+};
+
+var sayMore = function(){
+    console.log(this.name + "you are " + this.age);
+};
+//simply invoking sayHello without context
+sayHello();
+
+//invoking sayHello in two different contexts.
+sayHello.apply(person1);
+sayHello.apply(person2);
+
+sayMore.call(name, age,)
+
+  </script>
+
+</body>
+
+</html>

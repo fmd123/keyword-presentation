@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>apply example</title>
+</head>
+
+<body>
+  <script>
+    // function personContainer() {
+      var person = {
+        name: "James Smith",
+        hello: function() {
+          console.log(this.name + " says hello " + arguments[1]);
+        }
+      }
+
+
+    // }
+person.hello.apply(person, ['world', 'mars']);
+    // personContainer("world", "mars"); // //output: "James Smith says hello mars", note: arguments[0] = "world" , arguments[1] = "mars"
+  </script>
+
+</body>
+
+</html>
